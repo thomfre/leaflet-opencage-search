@@ -278,6 +278,8 @@
 				var results = [];
 				for (var i=data.results.length - 1; i >= 0; i--) {
 					results[i] = {
+						annotations: data.results[i].annotations,
+						components: data.results[i].components,
 						name: data.results[i].formatted,
 						center: L.latLng(data.results[i].geometry.lat, data.results[i].geometry.lng)
 					};

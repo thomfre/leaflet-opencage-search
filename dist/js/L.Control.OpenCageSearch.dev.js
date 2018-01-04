@@ -1,6 +1,6 @@
 /* 
- * OpenCage Data Search Control v1.1.2 - 2015-08-31
- * Copyright (c) 2015, OpenCage Data 
+ * OpenCage Data Search Control v1.1.2 - 2018-01-04
+ * Copyright (c) 2018, OpenCage Data 
  * info@opencagedata.com 
  * http://www.opencagedata.com 
  * 
@@ -288,6 +288,8 @@
 				var results = [];
 				for (var i=data.results.length - 1; i >= 0; i--) {
 					results[i] = {
+						annotations: data.results[i].annotations,
+						components: data.results[i].components,
 						name: data.results[i].formatted,
 						center: L.latLng(data.results[i].geometry.lat, data.results[i].geometry.lng)
 					};
